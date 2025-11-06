@@ -1,8 +1,9 @@
-package main.java;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
-import java.io.IOException;
+package main.java; // Pacotes do projeto.
+// Importando todas as classes neccesárias nativas do JDK.
+import java.nio.file.Files; // Importando o Files para arquivos.
+import java.nio.file.Paths; // Importando o Paths para consultas em arquivos.
+import java.util.List; // Importando o List para listas
+import java.io.IOException; // Importando o IOException para manipular as exceções.
 
 /**
  * Palavra - Classe que representa a palavra de cada tentativa e verificação dela;
@@ -12,14 +13,19 @@ import java.io.IOException;
  */
 
 public class Palavra {
-    private String letras;
-    private int tamanho;
 
+    private String letras; // Atributo para palavra.
+    private int tamanho; // Atributo para o tamanho da palavra.
+
+    // Construtor da Palavra
     public Palavra(String letras, int tamanho) {
-        this.letras = letras;
-        this.tamanho = tamanho;
+        this.letras = letras; // Recebe a palavra por parâmetro.
+        this.tamanho = tamanho; // E recebe o tamanho por parâmetro.
     }
 
+    /**
+     * Método que mostra as palavras na lista de palavras.
+     */
     public void todasPalavras(){
         try {
             List<String> linhas = Files.readAllLines(Paths.get("src/Jogo/resources/lexico.txt"));
@@ -34,6 +40,10 @@ public class Palavra {
         }
     }
 
+    /**
+     * Método que verifica o tamanho da palavra.
+     *
+     */
     public boolean verificarTamanho() {
         if (tamanho == 5) {
             return true;
@@ -43,9 +53,12 @@ public class Palavra {
         }
     }
 
+    /**
+     * Método que verifica a existência da palavra.
+     */
     public boolean existePalavra() {
         try {
-            List<String> linhas = Files.readAllLines(Paths.get("src/Jogo/resources/lexico.txt"));
+            List<String> linhas = Files.readAllLines(Paths.get("src/main/resources/lexico.txt"));
 
             // Verifica se a palavra existe na lista de palavras existentes
             for (String linha : linhas) {
@@ -61,12 +74,15 @@ public class Palavra {
         }
     }
 
-    public boolean palavraObsena() {
+    /**
+     * Método que verifica se a palvra é obscena.
+     */
+    public boolean palavraObscena() {
         try {
-            List<String> obsenas = Files.readAllLines(Paths.get("src/Jogo/resources/negativas.txt"));
+            List<String> obscenas = Files.readAllLines(Paths.get("src/main/resources/negativas.txt"));
 
             // Verifica se a palavra está na lista de palavras obsenas.
-            for (String linha : obsenas) {
+            for (String linha : obscenas) {
                 if (linha.equalsIgnoreCase(letras)) {
                     return true;
                 }
@@ -78,8 +94,4 @@ public class Palavra {
             return false;
         }
     }
-
-
-
-
 }

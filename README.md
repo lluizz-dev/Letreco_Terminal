@@ -27,6 +27,10 @@ Ela utiliza arquivos `.txt` com todas as palavras dentro da pasta `src/main/reso
 - [ ] Escolha aleatória de palavras;
 - [ ] Feedback visual com cores no terminal;
 
+### 🧩 Fase atual
+- [X] Verificação da palavra;
+- [ ] Lógica do jogo;
+- [ ] Implentação no terminal;
 
 ---
 
@@ -72,4 +76,7 @@ src/
 🎓 Estudante de Análise e Desenvolvimento de Sistemas  
 💻 Foco em Programação
 
-🔗 GitHub: [lluizz-dev](https://github.com/lluizz-dev)
+🔗 GitHub: [lluizz-dev](https://github.com/lluizz-dev)  
+📫 Email: luiz.eduardodss24@gmail.com
+
+---
