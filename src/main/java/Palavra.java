@@ -8,7 +8,7 @@ import java.io.IOException; // Importando o IOException para manipular as exceç
 /**
  * Palavra - Classe que representa a palavra de cada tentativa e verificação dela;
  *
- * @autoria Luiz Eduardo
+ * @author Luiz Eduardo
  * @version 1.0
  */
 
@@ -94,4 +94,13 @@ public class Palavra {
             return false;
         }
     }
+
+    public String getLetras() {
+        return letras;
+    }
+
+    public int getTamanho() {
+        return tamanho;
+    }
+
 }
