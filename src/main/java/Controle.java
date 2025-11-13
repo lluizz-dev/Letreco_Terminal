@@ -31,7 +31,7 @@ public class Controle {
     public static final String RESET = "\u001B[0m";
     public static final String BG_VERDE = "\u001B[42m";
     public static final String BG_AMARELO = "\u001B[43m";
-    public static final String BG_CINZA = "\u001B[47m";
+    public static final String BG_BLACK = "\u001B[40m";
 
     /**
      * Construtor da classe Controle.
@@ -100,7 +100,7 @@ public class Controle {
                         System.out.printf("%s %c %s", BG_AMARELO, Character.toUpperCase(letra), RESET);
                     } else {
                         // Letra não existe na palavra secreta → fundo cinza.
-                        System.out.printf("%s %c %s", BG_CINZA, Character.toUpperCase(letra), RESET);
+                        System.out.printf("%s %c %s", BG_BLACK, Character.toUpperCase(letra), RESET);
                     }
                 }
                 System.out.println(); // Quebra de linha entre tentativas.

@@ -37,7 +37,7 @@ Para rodar o jogo, é necessário ter o **Java Development Kit (JDK)** instalado
 #### 🧩 Passo a passo:
 1. Acesse o site oficial da Oracle:  
    👉 [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/)
-2. Baixe a versão mais recente do **JDK 21 ou superior** (recomendado: **JDK 25**).
+2. Baixe a versão mais recente do **JDK 21 ou superior**.
 3. Instale normalmente clicando em *Next* até concluir.
 
 #### 🧠 Verificando a instalação
@@ -47,7 +47,7 @@ java -version
 ```
 Se aparecer algo como:
 ```
-java version "25.0.1" 2025-09-17 LTS
+java version "21.0.1" 2025-07-15 LTS
 ```
 significa que o Java foi instalado com sucesso.
 
@@ -100,10 +100,10 @@ Certifique-se de que o **JDK configurado no projeto** seja o mesmo instalado no 
 Abra o arquivo `LetrecoConsole.java` e clique em ▶️ **Run**.
 
 #### ✅ Via terminal:
-Dentro da pasta `src/main/java`, digite:
+Dentro da pasta raiz do projeto, digite:
 ```bash
-javac LetrecoConsole.java
-java LetrecoConsole
+javac -d bin src/main/java/*.java
+java -cp bin main.java.LetrecoConsole
 ```
 
 ---
